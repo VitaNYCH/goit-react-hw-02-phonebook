@@ -1,12 +1,13 @@
 import React from "react";
-
-export const ContactList =() =>{
+import { NameList, ListItem } from "./ContactList.styled";
+export const ContactList = ({contacts}) =>{
+  console.log(contacts);
     return(
-  <ul>
-  {ContactList.map(contact=>{
-    <li></li>
-  })}
-  </ul>
+  <NameList>
+  {contacts.map(({id, data}) =>
+    <ListItem key = {id}>{data}</ListItem>
+  )}
+  </NameList>
 
     );
 }
