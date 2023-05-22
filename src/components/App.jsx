@@ -9,12 +9,13 @@ export class App extends Component{
   contacts: [],
   }
 
-formSubmitHandler = data => {
-  console.log(data)
+formSubmitHandler = (data, number )=> {
+  console.log(number)
   
   const contact = {
     id:  nanoid(),
     data,
+    number,
   }
   console.log(contact);
   this.setState(prevState => ({
