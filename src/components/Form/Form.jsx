@@ -56,9 +56,5 @@ Number
 <FormButton type='submit'>Add contact</FormButton>
   </FormStyle>
 
-
-
-)
-
-    }
+)}
 }
