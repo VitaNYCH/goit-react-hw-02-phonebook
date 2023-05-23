@@ -33,6 +33,13 @@ contacts: [contact, ...prevState.contacts],
 
 };
 
+deleteContact = (contactId) =>{
+  this.setState(prevState =>({
+    contacts: prevState.contacts.filter(contact => contact.id !== contactId)
+  }))
+
+}
+
 changeFilter = (e)=>{
 this.setState({filter: e.currentTarget.value});
 }
@@ -55,7 +62,7 @@ getVisibleContacts = ()=>{
    
   <Section title ='Contacts'>
    <Filter value = {filter} onChange={this.changeFilter} />
-   <ContactList contacts={filterContacts}/>
+   <ContactList contacts={filterContacts} onDeleteContact={this.deleteContact}/>
    </Section> 
 
    </Container>
