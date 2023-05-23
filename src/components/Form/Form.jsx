@@ -8,12 +8,10 @@ export class Form extends Component {
 
 
   handelInputChange = (e) => {
-    console.log(e.currentTarget.value);
    this.setState({name: e.currentTarget.value})
   }
 
   handelInputNumberChange= (e) => {
-    console.log(e.currentTarget.value);
    this.setState({number: e.currentTarget.value})
   }
 
