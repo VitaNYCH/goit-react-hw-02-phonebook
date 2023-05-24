@@ -15,13 +15,13 @@ export class App extends Component{
   }
 
 formSubmitHandler = (name, number )=> {
+  const {contacts} = this.state;
   const contact = {
     id:  nanoid(),
     name,
     number,
   }
-  const contactName = this.state.contacts.map(prevContact => prevContact.name)
-  console.log(contactName);
+  const contactName = contacts.map(prevContact => prevContact.name)
   if(contactName.includes(contact.name)){
     alert(`${name} is already in contacts`)
     return;

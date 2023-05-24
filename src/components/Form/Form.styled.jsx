@@ -20,10 +20,10 @@ background-color: #ffeb3b;
 export const FormButton  = styled.button`
 
 display: inline-block;
-margin-top: 80px;
+margin-top: 30px;
 
 width: 120px;
-height: 22px;
+height: 30px;
 
 font-size: 10px;
 font-weight: 600;

@@ -8,12 +8,9 @@ export class Form extends Component {
 
 
   handelInputChange = (e) => {
-   this.setState({name: e.currentTarget.value})
-  }
-
-  handelInputNumberChange= (e) => {
-   this.setState({number: e.currentTarget.value})
-  }
+    const {name, value} = e.currentTarget;
+     this.setState({[name]: value})
+    }
 
   handelOnSubmit=(e)=>{
     e.preventDefault();
@@ -47,7 +44,7 @@ Number
   type="tel"
   name="number"
   value={this.state.number}
-  onChange = {this.handelInputNumberChange}
+  onChange = {this.handelInputChange}
   pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
   title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
   required
